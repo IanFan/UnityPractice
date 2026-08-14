@@ -48,9 +48,9 @@ public class Loops : MonoBehaviour
         dict.Add(0, 0);
         dict.Add(1, 1);
 
-        foreach (var (key, value) in dict)
+        foreach (KeyValuePair<int,int> pair in dict)
         {
-            Debug.Log($"dict key: {key}, value: {value}");
+            Debug.Log($"dict key:{pair.Key}, value:{pair.Value}");
         }
 
         Debug.Log(
