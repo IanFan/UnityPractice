@@ -49,6 +49,13 @@ public class LINQ : MonoBehaviour
 
         int[] descArray = array.OrderByDescending(x => x).ToArray();
         Debug.Log($"descArray: {string.Join(",", descArray)}");
+        
+        array
+            .Where(number => number >= 3)
+            .Select(number => number * 2)
+            .OrderBy(number => number)
+            .ToList()
+            .ForEach(number => Debug.Log($"number: {number}"));
     }
 
     // Update is called once per frame
